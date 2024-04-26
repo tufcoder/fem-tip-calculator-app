@@ -1,0 +1,62 @@
+:root {
+    /* Typography */
+    /* 24px */
+    --fs-normal: 1rem;
+    --fs-input: 1.5rem;
+    --fw-normal: 400;
+    --fw-bold: 700;
+    /* ### Primary */
+    --strongCyan: hsl(172, 67%, 45%);
+    /* ### Neutral */
+    --veryDarkCyan: hsl(183, 100%, 15%);
+    --darkGrayishCyan: hsl(186, 14%, 43%);
+    --grayishCyan: hsl(184, 14%, 56%);
+    --lightGrayishCyan: hsl(185, 41%, 84%);
+    --veryLightGrayishCyan: hsl(189, 41%, 97%);
+    --white: hsl(0, 0%, 100%);
+    --linkColor: hsl(228, 45%, 44%);
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-normal);
+    font-family: 'Space Mono', sans-serif;
+    background-color: var(--lightGrayishCyan);
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+.attribution {
+    /* 11px */
+    font-size: 0.6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    color: var(--veryDarkCyan);
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: inherit;
+}
