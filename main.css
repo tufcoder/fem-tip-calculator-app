@@ -15,6 +15,7 @@
     --veryLightGrayishCyan: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
     --linkColor: hsl(228, 45%, 44%);
+    --orange: hsl(39, 100%, 50%);
 }
 
 html {
@@ -55,10 +56,10 @@ button {
 }
 
 input {
+    outline: 0;
     font-size: var(--fs-input);
     color: var(--darkGrayishCyan);
     background-color: inherit;
-    outline: 0;
 }
 
 .container {
@@ -87,16 +88,24 @@ input {
 }
 
 .icon-input {
+    position: relative;
     display: flex;
     align-items: center;
-    position: relative;
+    margin-block-start: 0.5rem;
+    /* 2px */
+    border: 0.125rem solid transparent;
     border-radius: 0.5rem;
-    /* 12px 16px */
-    padding: 0.75rem 1rem;
     background-color: var(--veryLightGrayishCyan);
 
+    img {
+        margin-inline-start: 1rem;
+    }
+
     input {
-        width: 95%;
+        width: 100%;
+        border-radius: inherit;
+        /* 12px 16px */
+        padding: 0.75rem 1rem;
         text-align: right;
         color: var(--veryDarkCyan);
     }
@@ -118,19 +127,9 @@ input {
     }
 }
 
-.button-tip {
-    /* 8px */
-    border-radius: 0.5rem;
-    /* 14px 60px */
-    padding: 0.875rem 3.75rem;
-    color: var(--white);
-    background-color: var(--veryDarkCyan);
-}
-
-.button-custom {
-    padding: 0;
-    color: var(--grayishCyan);
-    background-color: var(--veryLightGrayishCyan);
+.icon-input:focus-within {
+    /* 2px */
+    border: 0.125rem solid var(--strongCyan);
 }
 
 .tip-wrapper {
@@ -144,9 +143,52 @@ input {
     /* 146px */
     grid-template-columns: repeat(2, 9.125rem);
     gap: 1rem;
+    margin-block-start: 0.5rem;
+
+    .button-custom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 2px */
+        border: 0.125rem solid transparent;
+        padding: 1rem;
+        color: var(--grayishCyan);
+        background-color: var(--veryLightGrayishCyan);
+
+        &:focus-within {
+            /* 2px */
+            border: 0.125rem solid var(--strongCyan);
+        }
+
+        input {
+            width: 100%;
+            text-align: right;
+        }
+    }
+}
+
+.button-tip {
+    /* 48px */
+    height: 3rem;
+    /* 8px */
+    border-radius: 0.5rem;
+    /* 14px 60px */
+    padding: 0.875rem 0;
+    color: var(--white);
+    background-color: var(--veryDarkCyan);
+    transition: all .3s ease;
+}
+
+.button-tip:hover {
+    color: var(--veryDarkCyan);
+    background-color: var(--lightGrayishCyan);
 }
 
 .number-of-people-container {
+    .icon-input:focus-within {
+        border: 0.125rem solid var(--orange);
+    }
+
     input {
         text-align: right;
         color: var(--veryDarkCyan);
@@ -186,10 +228,16 @@ input {
     /* 40px */
     margin-block-start: 2.5rem;
     width: 100%;
-    border-radius: 0.5rem;
-    padding: 1rem 0;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0;
     text-transform: uppercase;
+    color: var(--veryDarkCyan);
     background-color: var(--strongCyan);
+    transition: background-color .3s ease;
+}
+
+.reset:hover {
+    background-color: var(--lightGrayishCyan);
 }
 
 .attribution {
