@@ -58,15 +58,14 @@ button {
 input {
     outline: 0;
     font-size: var(--fs-input);
-    color: var(--darkGrayishCyan);
     background-color: inherit;
 }
 
 .container {
     /* 320px */
     min-width: 20rem;
-    /* 400px */
-    max-width: 25rem;
+    /* 375px */
+    max-width: 23.4375rem;
     /* 48px */
     margin-block: 3rem;
     margin-inline: auto;
@@ -83,7 +82,7 @@ input {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
     /* 30px */
-    padding: 1.875rem;
+    padding: 2rem;
     background-color: var(--white);
 }
 
@@ -109,22 +108,6 @@ input {
         text-align: right;
         color: var(--veryDarkCyan);
     }
-
-    input+span {
-        padding-inline-start: 0.5rem;
-    }
-
-    input:invalid+span::after {
-        position: absolute;
-        content: "✖";
-        top: 30%;
-    }
-
-    input:valid+span::after {
-        position: absolute;
-        content: "✓";
-        top: 30%;
-    }
 }
 
 .icon-input:focus-within {
@@ -135,7 +118,6 @@ input {
 .tip-wrapper {
     /* 40px */
     margin-block: 2.5rem;
-    width: 310px;
 }
 
 .button-tip-container {
@@ -143,6 +125,7 @@ input {
     /* 146px */
     grid-template-columns: repeat(2, 9.125rem);
     gap: 1rem;
+    width: 100%;
     margin-block-start: 0.5rem;
 
     .button-custom {
@@ -163,6 +146,7 @@ input {
         input {
             width: 100%;
             text-align: right;
+            color: inherit;
         }
     }
 }
@@ -204,7 +188,7 @@ input {
     color: var(--white);
     background-color: var(--veryDarkCyan);
 
-    div {
+    .total-container {
         display: flex;
         align-items: center;
         justify-content: space-between;
