@@ -24,6 +24,7 @@
 <body>
     <main class="container">
         <header class="header">
+            <h1 class="hidden">Tip Calculator App</h1>
             <img src="images/logo.svg" alt="logo image" width="87" height="54">
         </header>
 
@@ -34,7 +35,7 @@
                 <div class="icon-input">
                     <img src="images/icon-dollar.svg" alt="icon dolar" width="11" height="17">
 
-                    <input type="text" name="bill" id="bill" inputmode="numeric" placeholder="0">
+                    <input type="text" name="bill" id="bill" placeholder="0">
                 </div>
 
                 <div class="tip-wrapper">
@@ -47,11 +48,9 @@
                         <button data-active="false" value="25" class="button-tip">25%</button>
                         <button data-active="false" value="50" class="button-tip">50%</button>
 
-                        <label for="custom">
-                            <div data-active="false" class="button-tip button-custom">
-                                <input type="text" name="custom" id="custom" placeholder="Custom" inputmode="numeric">
-                            </div>
-                        </label>
+                        <div data-active="false" class="button-tip button-custom">
+                            <input type="text" name="custom" id="custom" placeholder="Custom">
+                        </div>
                     </div>
                 </div>
 
@@ -64,13 +63,12 @@
                     <div class="icon-input">
                         <img src="images/icon-person.svg" alt="icon dolar" width="13" height="16">
 
-                        <input type="text" name="number-of-people" id="number-of-people" placeholder="0"
-                            inputmode="numeric">
+                        <input type="text" name="number-of-people" id="number-of-people" placeholder="0">
                     </div>
                 </div>
             </div>
 
-            <section class="resume-container">
+            <div class="resume-container">
                 <div>
                     <div class="total-container">
                         <p>
@@ -92,7 +90,7 @@
                 </div>
 
                 <button type="reset" class="reset">Reset</button>
-            </section>
+            </div>
         </form>
     </main>
 

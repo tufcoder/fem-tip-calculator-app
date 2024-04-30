@@ -100,6 +100,9 @@ const handleReset = () => {
 
     errorMessage.classList.add('hidden')
 
+    bill.value = ''
+    numberOfPeople.value = ''
+
     tipButtons.forEach(button => {
         button.dataset.active = 'false'
     })
@@ -132,9 +135,13 @@ const handleFormChange = (event) => {
 
         tipAmount.textContent = `$${tipPerPerson.toFixed(2)}`
         tipTotal.textContent = `$${totalPerPerson.toFixed(2)}`
+
+        reset.removeAttribute('disabled')
     } else {
         tipAmount.textContent = `$0.00`
         tipTotal.textContent = `$0.00`
+
+        reset.setAttribute('disabled', true)
     }
 }
 
@@ -158,3 +165,4 @@ tipButtons.forEach(button => {
 })
 
 reset.addEventListener('click', handleReset)
+reset.setAttribute('disabled', true)
