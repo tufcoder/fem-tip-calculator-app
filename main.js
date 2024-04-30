@@ -141,7 +141,7 @@ const handleFormChange = (event) => {
         tipAmount.textContent = `$0.00`
         tipTotal.textContent = `$0.00`
 
-        reset.setAttribute('disabled', true)
+        reset.setAttribute('disabled', '')
     }
 }
 
@@ -164,5 +164,5 @@ tipButtons.forEach(button => {
     button.addEventListener('click', handleTipButton)
 })
 
+reset.setAttribute('disabled', '')
 reset.addEventListener('click', handleReset)
-reset.setAttribute('disabled', true)
