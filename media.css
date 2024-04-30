@@ -1,9 +1,5 @@
 @media (min-width: 90rem) {
     .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
         max-width: 90rem;
         /* 160px */
         margin-block: 10rem;

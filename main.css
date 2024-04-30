@@ -33,6 +33,9 @@ html {
 }
 
 body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
     font-weight: var(--fw-bold);
     font-size: var(--fs-normal);
     font-family: 'Space Mono', sans-serif;
@@ -64,9 +67,6 @@ input {
     min-width: 20rem;
     /* 375px */
     max-width: 23.4375rem;
-    /* 48px */
-    margin-block: 3rem;
-    margin-inline: auto;
 }
 
 .header {
