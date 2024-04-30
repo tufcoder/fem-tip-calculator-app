@@ -101,6 +101,7 @@ const handleReset = () => {
     errorMessage.classList.add('hidden')
 
     bill.value = ''
+    custom.value = ''
     numberOfPeople.value = ''
 
     tipButtons.forEach(button => {
