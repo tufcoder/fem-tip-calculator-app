@@ -34,35 +34,38 @@
                 <div class="icon-input">
                     <img src="images/icon-dollar.svg" alt="icon dolar" width="11" height="17">
 
-                    <input type="text" name="bill" id="bill" placeholder="0" min="0" step="0.01" inputmode="numeric"
-                        pattern="\d*\.\d{2}" maxlength="19">
+                    <input type="text" name="bill" id="bill" inputmode="numeric" placeholder="0">
                 </div>
 
                 <div class="tip-wrapper">
                     <p>Select Tip %</p>
 
                     <div class="button-tip-container">
-                        <button data-active="false" class="button-tip">5%</button>
-                        <button data-active="false" class="button-tip">10%</button>
-                        <button data-active="false" class="button-tip">15%</button>
-                        <button data-active="false" class="button-tip">25%</button>
-                        <button data-active="false" class="button-tip">50%</button>
+                        <button data-active="false" value="5" class="button-tip">5%</button>
+                        <button data-active="false" value="10" class="button-tip">10%</button>
+                        <button data-active="false" value="15" class="button-tip">15%</button>
+                        <button data-active="false" value="25" class="button-tip">25%</button>
+                        <button data-active="false" value="50" class="button-tip">50%</button>
 
-                        <div data-active="false" class="button-tip button-custom">
-                            <input type="text" name="custom" id="custom" placeholder="Custom" inputmode="numeric"
-                                pattern="\d*" maxlength="8">
-                        </div>
+                        <label for="custom">
+                            <div data-active="false" class="button-tip button-custom">
+                                <input type="text" name="custom" id="custom" placeholder="Custom" inputmode="numeric">
+                            </div>
+                        </label>
                     </div>
                 </div>
 
                 <div class="number-of-people-container">
-                    <label for="number-of-people">Number of People</label>
+                    <label for="number-of-people">
+                        <span>Number of People</span>
+                        <span class="error-message hidden">Can't be zero</span>
+                    </label>
 
                     <div class="icon-input">
                         <img src="images/icon-person.svg" alt="icon dolar" width="13" height="16">
 
-                        <input type="text" name="number-of-people" id="number-of-people" placeholder="0" min="0"
-                            step="1" inputmode="numeric" pattern="\d*" maxlength="19">
+                        <input type="text" name="number-of-people" id="number-of-people" placeholder="0"
+                            inputmode="numeric">
                     </div>
                 </div>
             </div>

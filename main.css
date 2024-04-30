@@ -16,6 +16,7 @@
     --white: hsl(0, 0%, 100%);
     --linkColor: hsl(228, 45%, 44%);
     --orange: hsl(39, 100%, 50%);
+    --red: hsl(0, 100%, 50%);
 }
 
 html {
@@ -49,9 +50,6 @@ button {
     font-weight: inherit;
     font-size: inherit;
     font-family: inherit;
-}
-
-button {
     cursor: pointer;
 }
 
@@ -161,16 +159,27 @@ input {
     color: var(--white);
     background-color: var(--veryDarkCyan);
     transition: all .3s ease;
-}
 
-.button-tip:hover {
-    color: var(--veryDarkCyan);
-    background-color: var(--lightGrayishCyan);
+    &:hover {
+        color: var(--veryDarkCyan);
+        background-color: var(--lightGrayishCyan);
+    }
+
+    &[data-active=true] {
+        color: var(--veryDarkCyan);
+        background-color: var(--strongCyan);
+    }
 }
 
 .number-of-people-container {
-    .icon-input:focus-within {
-        border: 0.125rem solid var(--orange);
+    label {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .error-message {
+        color: var(--orange);
     }
 
     input {
@@ -222,6 +231,18 @@ input {
 
 .reset:hover {
     background-color: var(--lightGrayishCyan);
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    border-color: var(--red) !important;
+}
+
+.border-color-orange {
+    border-color: var(--orange) !important;
 }
 
 .attribution {
